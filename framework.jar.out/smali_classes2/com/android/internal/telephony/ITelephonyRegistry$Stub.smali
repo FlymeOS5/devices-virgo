@@ -88,6 +88,7 @@
 
 .field static final TRANSACTION_removeOnSubscriptionsChangedListener:I = 0x2
 
+.field static final TRANSACTION_isImsRegistered:I = 0x77
 
 # direct methods
 .method public constructor <init>()V

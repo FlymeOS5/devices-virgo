@@ -198,6 +198,8 @@
 
 .field protected final mPreciseCallStateRegistrants:Landroid/os/RegistrantList;
 
+.field protected mRadioAccessFamily:I
+
 .field protected final mRadioOffOrNotAvailableRegistrants:Landroid/os/RegistrantList;
 
 .field protected final mServiceStateRegistrants:Landroid/os/RegistrantList;
@@ -595,7 +597,7 @@
 
     move-result-object v2
 
-    const v3, 0x1120052
+    const v3, #android:bool@config_voice_capable#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1603,7 +1605,7 @@
 
     move-result-object v8
 
-    const v9, 0x1070049
+    const v9, #android:array@carrier_properties#t
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 
@@ -8200,4 +8202,13 @@
     .line 1231
     :cond_0
     return-void
+.end method
+
+.method public getRadioAccessFamily()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/telephony/PhoneBase;->mRadioAccessFamily:I
+
+    return v0
 .end method

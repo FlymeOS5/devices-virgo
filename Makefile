@@ -7,21 +7,21 @@
 # The default value is base.
 # Support values: base, base_cm, base_mt6592 and other devices in the future.
 #-----------------------------------------------------------------------------
-#BASE := base_cm
+BASE := cancro_aosp
 
 ##############################################################################
 # The value is used for resource adapter with the aapt tool.
 # It depends on the device's resolution.
 # The default value is hdpi.
 #-----------------------------------------------------------------------------
-DENSITY := xhdpi
+DENSITY := xxhdpi
 
 ##############################################################################
 # The value is used to config the bootanimation.
 # It depends on the device's resolution, such as 480x854, 540x960, 720x1280, 1080x1920.
 # The default value is nothing.
 #-----------------------------------------------------------------------------
-RESOLUTION := 720x1280
+RESOLUTION := 1080x1920
 
 ##############################################################################
 # The value decides whether use prebuilt image or pack from the BOOT or RECOVERY directory in the vendor directory.
@@ -54,7 +54,8 @@ vendor_modify_images := boot
 # The default value is Bluetooth.
 # You can configure the apk name in the vendor/system/app or vendor/system/pri-app directory.
 #-----------------------------------------------------------------------------
-vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
+vendor_saved_apps := AntHalService Bluetooth Camera2 HTMLViewer KeyChain \
+shutdownlistener TimeService UserDictionaryProvider BackupRestoreConfirmation  TimeService \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
                      ProxyHandler Shell DefaultContainerService
 
@@ -96,7 +97,7 @@ board_saved_files := lib/libwebviewchromium.so
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-#board_remove_apps := LogReport
+board_remove_apps := LogReport MzUpdate
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
@@ -141,8 +142,11 @@ board_saved_files := lib/libwebviewchromium.so
 # The default value is Nexus-5_Unofficial.
 # You should configure the property according to your device and your ID with replace the "Nexus-5_Unofficial".
 override_property += \
-    ro.flyme.romer=Unofficial \
-    ro.product.model_romer=Nexus-5_Unofficial
+    ro.flyme.romer=nian0114 \
+    ro.product.model_romer=port_nian0114 \
+    ro.ota.romname=Flyme OS \
+    ro.ota.manifest=http://flymeota.nianrom.cn/virgo/ota.xml \
+    ro.ota.version=20160508
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.

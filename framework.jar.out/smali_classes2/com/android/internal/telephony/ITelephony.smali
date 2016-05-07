@@ -658,7 +658,6 @@
         }
     .end annotation
 .end method
-
 .method public abstract isOffhook()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -994,6 +993,14 @@
 .end method
 
 .method public abstract updateServiceLocationForSubscriber(I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract isImsRegistered()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
