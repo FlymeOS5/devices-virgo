@@ -146,7 +146,7 @@ override_property += \
     ro.product.model_romer=port_nian0114 \
     ro.ota.romname=Flyme OS \
     ro.ota.manifest=http://flymeota.nianrom.cn/virgo/ota.xml \
-    ro.ota.version=20160509
+    ro.ota.version=20160516
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
