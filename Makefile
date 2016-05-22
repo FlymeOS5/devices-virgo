@@ -97,7 +97,7 @@ board_saved_files := lib/libwebviewchromium.so bin/bootanimation media/bootanima
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-board_remove_apps := LogReport MzUpdate
+board_remove_apps := LogReport NianSettings
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
@@ -109,7 +109,7 @@ board_remove_apps := LogReport MzUpdate
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := TeleService SystemUI
+board_modify_apps := TeleService SystemUI Settings
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -146,7 +146,7 @@ override_property += \
     ro.product.model_romer=port_nian0114 \
     ro.ota.romname=Flyme OS \
     ro.ota.manifest=http://flymeota.nianrom.cn/virgo/ota.xml \
-    ro.ota.version=20160516
+    ro.ota.version=20160521
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
