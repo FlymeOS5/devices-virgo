@@ -142,11 +142,9 @@ board_modify_apps := TeleService SystemUI Settings
 # The default value is Nexus-5_Unofficial.
 # You should configure the property according to your device and your ID with replace the "Nexus-5_Unofficial".
 override_property += \
-    ro.flyme.romer=nian0114 \
-    ro.product.model_romer=port_nian0114 \
     ro.ota.romname=Flyme OS \
     ro.ota.manifest=http://flymeota.nianrom.cn/virgo/ota.xml \
-    ro.ota.version=20160524
+    ro.ota.version=20160614
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
@@ -162,7 +160,7 @@ override_property += \
 # Set it to be false when you want to escape the verification.
 # Default: true
 #-----------------------------------------------------------------------------
-#USE_ASSERTIONS_IN_UPDATER_SCRIPT := false
+USE_ASSERTIONS_IN_UPDATER_SCRIPT := false
 
 ##############################################################################
 # Defines whether reduces useless resources, only keep the resources of preferred configuration, like current density or locale.
