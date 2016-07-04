@@ -144,7 +144,7 @@ board_modify_apps := TeleService SystemUI Settings
 override_property += \
     ro.ota.romname=Flyme OS \
     ro.ota.manifest=http://flymeota.nianrom.cn/virgo/ota.xml \
-    ro.ota.version=20160621
+    ro.ota.version=20160627
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
