@@ -2701,3 +2701,51 @@
 
     goto :goto_0
 .end method
+
+.method public static isJcopUpgradeSupported()Z
+    .locals 2
+
+    .prologue
+    const-string v0, "true"
+
+    const-string v1, "ro.product.jcopupgrade"
+
+    invoke-static {v1}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isMarshallowFlymePermissionDisable()Z
+    .locals 2
+
+    .prologue
+    const-string v0, "persist.sys.m.flymesafe"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "disable"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
